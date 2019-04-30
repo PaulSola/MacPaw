@@ -10,7 +10,7 @@ import Foundation
 
 class BeefEvent: Event{
     let deefWebsiteURL = URL(string: "http://beef.kiev.ua")
-    
+    //test commit
     let beefAppStoreURL = URL(string: "https://itunes.apple.com/us/app/beef/id1457689620?l=ru&ls=1&mt=8")
     
     var eventName: String
