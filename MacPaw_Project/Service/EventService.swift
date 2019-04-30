@@ -12,7 +12,7 @@ class EventService {
     
     func appendEvent(_ events: inout [Event]){
         
-            let sportEvent = SportEvent(eventName: "I like sport", eventImage: "backgroundDay", sports: [Sports(sportName: "SKII", sportImage: "backgroundDay")])
+            let sportEvent = SportEvent(eventName: "I like sport", eventImage: "backgroundDay", sports: [Sports(sportName: "SKII", sportImage: "backgroundDay"),Sports(sportName: "SKII", sportImage: "backgroundDay"),Sports(sportName: "SKII", sportImage: "backgroundDay")])
             let beefEvent = BeefEvent(eventName: "I like BEEF", eventImage: "backgroundNight")
         
             events.append(sportEvent)

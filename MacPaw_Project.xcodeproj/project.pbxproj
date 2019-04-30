@@ -46,6 +46,7 @@
 		AB9F3FFE22660D240083C6EB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F3FFD22660D240083C6EB /* UserDefaults.swift */; };
 		AB9F4001226617000083C6EB /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F4000226617000083C6EB /* NotificationExt.swift */; };
 		ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */; };
+		ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3152278CDBB0058DFC9 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		AB9F3FFD22660D240083C6EB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AB9F4000226617000083C6EB /* NotificationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
 		ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
+		ABA6C3152278CDBB0058DFC9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 			children = (
 				AB9F3FFD22660D240083C6EB /* UserDefaults.swift */,
 				AB2806352268725B00BD2A4B /* ThemeController.swift */,
+				ABA6C3152278CDBB0058DFC9 /* Device.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				AB2806412269D82100BD2A4B /* Event.swift in Sources */,
 				AB2806362268725B00BD2A4B /* ThemeController.swift in Sources */,
 				AB9F3FE222621A5C0083C6EB /* Robot1400.swift in Sources */,
+				ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */,
 				AB9F3FE822621DC30083C6EB /* Robot6400.swift in Sources */,
 				AB9F3FF12263A03F0083C6EB /* RobotsWithActions.swift in Sources */,
 				AB9F3FD9226207E10083C6EB /* WeldingRobot.swift in Sources */,

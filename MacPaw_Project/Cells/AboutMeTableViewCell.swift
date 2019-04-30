@@ -83,7 +83,7 @@ class AboutMeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func createView(image: String, title: String){
+    func createView(image: String?, title: String){
         let screenWidth = UIScreen.main.bounds.width
         
         contentView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
@@ -109,7 +109,8 @@ class AboutMeTableViewCell: UITableViewCell {
         eventImageView.leftAnchor.constraint(equalTo: baseView.leftAnchor, constant: 0).isActive = true
         eventImageView.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: 0).isActive = true
         eventImageView.heightAnchor.constraint(equalToConstant: CGFloat(Int(screenWidth - 50)/3*4) - 90).isActive = true
-        eventImageView.image = UIImage(named: image)
+
+        eventImageView.image = UIImage(named: image ?? "default")
         
         titleView.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 0).isActive = true
         titleView.leftAnchor.constraint(equalTo: baseView.leftAnchor, constant: 0).isActive = true

@@ -36,13 +36,15 @@ class SportsEventViewController: UIViewController {
         sportTableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         sportTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
-        sportTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        sportTableView.register(SportsTableViewCell.self, forCellReuseIdentifier: "MyCell")
         sportTableView.delegate = self
         sportTableView.dataSource = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         view.backgroundColor = .white
         confTableView()
@@ -59,9 +61,16 @@ extension SportsEventViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = sportTableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        cell.textLabel!.text = event.sports[indexPath.row].sportName
+        let cell = sportTableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath ) as! SportsTableViewCell
+        
+        
+        let  sports = event.sports[indexPath.row]
+        cell.configureSportView(sportName: sports.sportName, image: sports.sportImage)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Device.width + 50
     }
     
     
