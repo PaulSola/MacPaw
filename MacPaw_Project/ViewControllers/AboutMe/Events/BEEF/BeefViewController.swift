@@ -35,74 +35,27 @@ class BeefViewController: UIViewController {
         return view
     }()
     
-    let linkTitle: UILabel = {
-        
-        let title = UILabel()
-        title.translatesAutoresizingMaskIntoConstraints = false
-        title.text = "Links"
-        title.font = UIFont(name:"Helvetica", size: 30)
-        
-        return title
-    }()
+    let siteAppLabel = UILabel().beefAppLabel()
     
-    let siteAppImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 20
-        image.image = UIImage(named: "BUK")
-        image.isUserInteractionEnabled = true
-        
-        return image
-    }()
+    let beefAppLabel = UILabel().beefAppLabel()
     
+    let siteAppImage = UIImageView().beefAppImage()
     
-    let beefAppImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 20
-        image.image = UIImage(named: "BUK")
-        image.isUserInteractionEnabled = true
+    let beefAppImage = UIImageView().beefAppImage()
         
-        return image
-    }()
     
     let beefDescr: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "SomeSomeSSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomSomeSomeSSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeomeSomeSomeSomeSomeSomeSomeSomeSSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeomeSomeSomeSomeSomeSomeeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeomeSomeSomeSomeSomeSome"
+        label.text = "SomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSome"
         label.font = UIFont(name:"Helvetica", size: 21)
         label.numberOfLines = 0
         label.textColor = .white
         return label
     }()
 
-    fileprivate func setScrollView() {
-        view.addSubview(scrollView)
-        scrollView.addSubview(beefImage)
-        scrollView.addSubview(beefDescr)
-        scrollView.zeroConstraint( with: self.view)
-        scrollView.backgroundColor = #colorLiteral(red: 0.772505552, green: 0.1750737086, blue: 0.05873733509, alpha: 1)
-        self.scrollView.contentSize.height = 2000
-        
-        scrollView.addSubview(appView)
-        appView.addSubview(beefAppImage)
-        appView.addSubview(siteAppImage)
-        
-        beefAppImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showBeefApp)))
-        siteAppImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showBeefSite)))
-        
-        
-        
-        
-        //scrollView.addSubview(linkTitle)
-        
-        
-    }
+    
     
     @objc private func showBeefApp(){
         print("showBeefApp")
@@ -124,28 +77,40 @@ class BeefViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black
-        self.navigationItem.title = "BEEF"
+    fileprivate func setScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(beefImage)
+        scrollView.addSubview(beefDescr)
+        scrollView.zeroConstraint( with: self.view)
+        scrollView.backgroundColor = #colorLiteral(red: 0.772505552, green: 0.1750737086, blue: 0.05873733509, alpha: 1)
+        self.scrollView.contentSize.height = 2000
         
+        scrollView.addSubview(appView)
+        appView.addSubview(beefAppImage)
+        appView.addSubview(siteAppImage)
+        appView.addSubview(beefAppLabel)
+        appView.addSubview(siteAppLabel)
         
-        setScrollView()
-       
+        beefAppImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showBeefApp)))
+        siteAppImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showBeefSite)))
+        
         beefImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
         beefImage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
         beefImage.heightAnchor.constraint(equalToConstant:  Device.width).isActive = true
         beefImage.widthAnchor.constraint(equalToConstant: Device.width).isActive = true
         
-        
         beefDescr.topAnchor.constraint(equalTo: beefImage.bottomAnchor, constant: 10).isActive = true
-        //beefImage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        //beefImage.widthAnchor.constraint(equalToConstant: Device.width - 20).isActive = true
-        //beefDescr.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,constant: -10).isActive = true
         beefDescr.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 10).isActive = true
         beefDescr.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
-//        beefDescr.leftAnchor.constraint(equalTo: scrollView.leftAnchor,constant: 10).isActive = true
         
+        setAppView()
+        
+        //scrollView.addSubview(linkTitle)
+        
+        
+    }
+    
+    fileprivate func setAppView() {
         appView.topAnchor.constraint(equalTo: beefDescr.bottomAnchor, constant: 15).isActive = true
         appView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         appView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
@@ -156,31 +121,35 @@ class BeefViewController: UIViewController {
         beefAppImage.heightAnchor.constraint(equalToConstant:  80).isActive = true
         beefAppImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
+        
+        beefAppLabel.text = "<- Link to AppStore"
+        beefAppLabel.centerYAnchor.constraint(equalTo: beefAppImage.centerYAnchor).isActive = true
+        beefAppLabel.leftAnchor.constraint(equalTo: beefAppImage.rightAnchor, constant: 40).isActive = true
+        
+        
+        
         siteAppImage.topAnchor.constraint(equalTo: beefAppImage.bottomAnchor, constant: 40).isActive = true
         siteAppImage.leftAnchor.constraint(equalTo: appView.leftAnchor, constant: 10).isActive = true
         siteAppImage.heightAnchor.constraint(equalToConstant:  80).isActive = true
         siteAppImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
+        siteAppLabel.text = "<- Link to Beef Site"
+        siteAppLabel.centerYAnchor.constraint(equalTo: siteAppImage.centerYAnchor).isActive = true
+        siteAppLabel.leftAnchor.constraint(equalTo: siteAppImage.rightAnchor, constant: 40).isActive = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .black
+        self.navigationItem.title = "BEEF"
         
+        
+        setScrollView()
         //print(scrollView.autoSizedHeight())
         
         
         
     }
     
-    
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -48,6 +48,7 @@
 		ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */; };
 		ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3152278CDBB0058DFC9 /* Device.swift */; };
 		ABA6C3182279B5BC0058DFC9 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3172279B5BC0058DFC9 /* Constraint.swift */; };
+		ABA6C31B227A19FA0058DFC9 /* BeefLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
 		ABA6C3152278CDBB0058DFC9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		ABA6C3172279B5BC0058DFC9 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeefLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,8 @@
 		AB1FF698227255FF007E7D06 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				ABA6C319227A199C0058DFC9 /* BEEF */,
 				AB1FF69922725629007E7D06 /* SportsEventViewController.swift */,
-				AB28064E226A081A00BD2A4B /* BeefAppSoreViewController.swift */,
-				AB1FF69B22725F0B007E7D06 /* BeefViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -305,8 +306,18 @@
 			children = (
 				AB9F4000226617000083C6EB /* NotificationExt.swift */,
 				ABA6C3172279B5BC0058DFC9 /* Constraint.swift */,
+				ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABA6C319227A199C0058DFC9 /* BEEF */ = {
+			isa = PBXGroup;
+			children = (
+				AB28064E226A081A00BD2A4B /* BeefAppSoreViewController.swift */,
+				AB1FF69B22725F0B007E7D06 /* BeefViewController.swift */,
+			);
+			path = BEEF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +424,7 @@
 				ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */,
 				AB9F3FEA22621E1F0083C6EB /* PayloadingRobot.swift in Sources */,
 				AB28064F226A081A00BD2A4B /* BeefAppSoreViewController.swift in Sources */,
+				ABA6C31B227A19FA0058DFC9 /* BeefLayout.swift in Sources */,
 				AB9F3FC3226205930083C6EB /* ViewController.swift in Sources */,
 				AB9F3FF92265E0940083C6EB /* DescrRobotViewController.swift in Sources */,
 				AB1FF69C22725F0B007E7D06 /* BeefViewController.swift in Sources */,
@@ -587,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83HAYX7H67;
 				INFOPLIST_FILE = MacPaw_Project/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83HAYX7H67;
 				INFOPLIST_FILE = MacPaw_Project/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

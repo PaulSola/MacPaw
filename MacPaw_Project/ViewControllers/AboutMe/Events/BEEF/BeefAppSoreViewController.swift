@@ -11,6 +11,15 @@ import WebKit
 
 class BeefAppSoreSiteViewController: UIViewController, WKNavigationDelegate {
     
+    let activityView : UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+        activity.frame = CGRect(x: 20, y: 12, width: 40, height: 40)
+        
+        return activity
+    }()
+    //let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+    let textLabel = UILabel(frame: CGRect(x: 0, y: 50, width: 80, height: 30))
+    
     let webView = WKWebView()
     
     let url : URL?
@@ -47,16 +56,16 @@ class BeefAppSoreSiteViewController: UIViewController, WKNavigationDelegate {
     
     func webViewStartLoading() {
         // Box config:
-        boxView = UIView(frame: CGRect(x: deviceWidth/2, y: deviceHeight/2, width: 80, height: 80))
+        let boxSize = CGFloat(80)
+        boxView = UIView(frame: CGRect(x: (deviceWidth - boxSize)/2, y: (deviceHeight - boxSize)/2 , width: boxSize, height: boxSize))
         boxView.backgroundColor = UIColor.black
         boxView.alpha = 0.9
         boxView.layer.cornerRadius = 10
         // Spin config:
-        let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
-        activityView.frame = CGRect(x: 20, y: 12, width: 40, height: 40)
+        
         activityView.startAnimating()
         // Text config:
-        let textLabel = UILabel(frame: CGRect(x: 0, y: 50, width: 80, height: 30))
+        
         textLabel.textColor = UIColor.white
         textLabel.textAlignment = .center
         textLabel.font = UIFont(name: textLabel.font.fontName, size: 13)
@@ -75,6 +84,9 @@ class BeefAppSoreSiteViewController: UIViewController, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             print(error)
+            activityView.stopAnimating()
+        //activityView.removeFromSuperview()
+        textLabel.text = "Something wrong"
     }
     
     
