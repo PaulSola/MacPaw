@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 extension Notification.Name {
     static let nightModeEnabled = Notification.Name("nightModeEnabled")
     static let nightModeDisabled = Notification.Name("dayModeDisabled")
 }
+
+

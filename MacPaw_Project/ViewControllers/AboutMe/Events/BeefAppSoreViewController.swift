@@ -9,10 +9,11 @@
 import UIKit
 import WebKit
 
-class BeefAppSoreViewController: UIViewController, WKNavigationDelegate {
+class BeefAppSoreSiteViewController: UIViewController, WKNavigationDelegate {
     
-    @IBOutlet weak var webKitView: WKWebView!
+    let webView = WKWebView()
     
+    let url : URL?
     
     let deviceWidth = UIScreen.main.bounds.size.width
     let deviceHeight = UIScreen.main.bounds.size.height
@@ -21,15 +22,27 @@ class BeefAppSoreViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webKitView.navigationDelegate = self
-        if let url = URL(string: "https://itunes.apple.com/us/app/beef/id1457689620?l=ru&ls=1&mt=8"){
+        view.addSubview(webView)
+        webView.zeroConstraint(with: self.view)
+        
+        webView.navigationDelegate = self
+        if let beefUrl = url{
             
-            let request = URLRequest(url: url)
-           webKitView.load(request)
+            let request = URLRequest(url: beefUrl)
+           webView.load(request)
             webViewStartLoading()
         } else { return }
         
         
+    }
+    init(url: URL) {
+        self.url = url
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func webViewStartLoading() {
@@ -61,7 +74,7 @@ class BeefAppSoreViewController: UIViewController, WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-
+            print(error)
     }
     
     

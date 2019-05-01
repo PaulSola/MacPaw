@@ -60,35 +60,16 @@
             </objects>
             <point key="canvasLocation" x="1716" y="68.815592203898049"/>
         </scene>
-        <!--Show Event View Controller-->
+        <!--Beef App Sore Site View Controller-->
         <scene sceneID="SRt-LG-gjT">
             <objects>
-                <viewController storyboardIdentifier="ShowEventViewController" id="boh-zh-5yE" customClass="ShowEventViewController" customModule="MacPaw_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowEventViewController" id="boh-zh-5yE" customClass="BeefAppSoreSiteViewController" customModule="MacPaw_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9k-qZ-lMu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42J-uj-0Mx">
-                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="42J-uj-0Mx" firstAttribute="top" secondItem="0kk-aa-INc" secondAttribute="top" id="4Yf-iU-TRk"/>
-                            <constraint firstItem="42J-uj-0Mx" firstAttribute="bottom" secondItem="0kk-aa-INc" secondAttribute="bottom" id="85h-mt-iU3"/>
-                            <constraint firstItem="42J-uj-0Mx" firstAttribute="leading" secondItem="0kk-aa-INc" secondAttribute="leading" id="TpJ-be-dur"/>
-                            <constraint firstItem="42J-uj-0Mx" firstAttribute="trailing" secondItem="0kk-aa-INc" secondAttribute="trailing" id="r3f-gb-aJJ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0kk-aa-INc"/>
                     </view>
-                    <connections>
-                        <outlet property="webKitView" destination="42J-uj-0Mx" id="ep3-OL-4SA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWl-hx-XbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

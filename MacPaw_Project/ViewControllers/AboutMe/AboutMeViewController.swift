@@ -79,7 +79,7 @@ extension AboutMeViewController : UITableViewDelegate, UITableViewDataSource {
         case is SportEvent:
             return SportsEventViewController(event: event)
         case is BeefEvent:
-            return BeefViewController()
+            return BeefViewController(event: event)
         default:
             return nil
 //            return dictionary.get(event)

@@ -30,11 +30,14 @@ class SportsEventViewController: UIViewController {
     func confTableView() {
         self.view.addSubview(sportTableView)
         
-        sportTableView.translatesAutoresizingMaskIntoConstraints = false
-        sportTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        sportTableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        sportTableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        sportTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+       //sportTableView.translatesAutoresizingMaskIntoConstraints = false
+//        sportTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+//        sportTableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+//        sportTableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+//        sportTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        
+        sportTableView.zeroConstraint( with: self.view)
+    
         
         sportTableView.register(SportsTableViewCell.self, forCellReuseIdentifier: "MyCell")
         sportTableView.delegate = self
@@ -44,7 +47,8 @@ class SportsEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        sportTableView.allowsSelection = false
+        self.navigationItem.title = "Sports"
         
         view.backgroundColor = .white
         confTableView()
@@ -65,12 +69,18 @@ extension SportsEventViewController: UITableViewDelegate, UITableViewDataSource{
         
         
         let  sports = event.sports[indexPath.row]
-        cell.configureSportView(sportName: sports.sportName, image: sports.sportImage)
+        cell.configureSportView(sportName: sports.sportName, image: sports.sportImage, descrText: sports.sportDescription)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Device.width + 50
+        
+        return UITableView.automaticDimension
+        
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Device.width + 200
     }
     
     

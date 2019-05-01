@@ -19,22 +19,32 @@ class SportsTableViewCell: UITableViewCell {
         return image
     }()
     
+    let sportDescr: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "SportDesct"
+        label.font = UIFont(name:"Helvetica-Light", size: 15)
+        label.numberOfLines = 0
+        return label
+    }()
     
     let sportLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.text = "Sport"
-        label.font = UIFont(name:"Helvetica-light", size: 25)
+        label.font = UIFont(name:"Helvetica-Bold", size: 25)
         return label
     }()
     
-    func configureSportView(sportName: String, image: String?){
+    func configureSportView(sportName: String, image: String?, descrText : String){
         sportLabel.text = sportName
         sportImage.image = UIImage(named: image ?? "default")
+        sportDescr.text = descrText
         
         contentView.addSubview(sportLabel)
         contentView.addSubview(sportImage)
+        contentView.addSubview(sportDescr)
         
         sportLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10).isActive = true
         sportLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
@@ -44,7 +54,12 @@ class SportsTableViewCell: UITableViewCell {
         sportImage.topAnchor.constraint(equalTo: sportLabel.bottomAnchor, constant: 5).isActive = true
         sportImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0).isActive = true
         sportImage.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0).isActive = true
-        sportImage.heightAnchor.constraint(equalToConstant: Device.width * 3 / 4).isActive = true
+        sportImage.heightAnchor.constraint(equalToConstant: Device.width ).isActive = true
+        
+        sportDescr.topAnchor.constraint(equalTo: sportImage.bottomAnchor, constant: 10).isActive = true
+        sportDescr.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
+        sportDescr.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10).isActive = true
+        sportDescr.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20).isActive = true
         
     }
 

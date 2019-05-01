@@ -12,6 +12,7 @@ import Foundation
 struct Sports {
     
     var sportName: String
+    var sportDescription: String
     var sportImage: String
 }
 

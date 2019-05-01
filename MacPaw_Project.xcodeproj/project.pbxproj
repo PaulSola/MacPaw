@@ -47,6 +47,7 @@
 		AB9F4001226617000083C6EB /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F4000226617000083C6EB /* NotificationExt.swift */; };
 		ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */; };
 		ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3152278CDBB0058DFC9 /* Device.swift */; };
+		ABA6C3182279B5BC0058DFC9 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3172279B5BC0058DFC9 /* Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		AB9F4000226617000083C6EB /* NotificationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
 		ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
 		ABA6C3152278CDBB0058DFC9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		ABA6C3172279B5BC0058DFC9 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				AB9F4000226617000083C6EB /* NotificationExt.swift */,
+				ABA6C3172279B5BC0058DFC9 /* Constraint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA6C3182279B5BC0058DFC9 /* Constraint.swift in Sources */,
 				AB9F3FDD226210B80083C6EB /* Welder.swift in Sources */,
 				AB9F3FD6226205A80083C6EB /* Robot.swift in Sources */,
 				AB2806452269EBBC00BD2A4B /* ContainerViewController.swift in Sources */,
