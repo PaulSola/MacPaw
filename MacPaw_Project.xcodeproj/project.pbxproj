@@ -50,6 +50,8 @@
 		ABA6C3182279B5BC0058DFC9 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3172279B5BC0058DFC9 /* Constraint.swift */; };
 		ABA6C31B227A19FA0058DFC9 /* BeefLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */; };
 		ABA6C322227AEB520058DFC9 /* LikeMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C321227AEB520058DFC9 /* LikeMeView.swift */; };
+		ABA6C324227B19E20058DFC9 /* RobotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C323227B19E20058DFC9 /* RobotTableViewCell.swift */; };
+		ABA6C327227B245A0058DFC9 /* RobotPerform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C326227B245A0058DFC9 /* RobotPerform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		ABA6C3172279B5BC0058DFC9 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeefLayout.swift; sourceTree = "<group>"; };
 		ABA6C321227AEB520058DFC9 /* LikeMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeMeView.swift; sourceTree = "<group>"; };
+		ABA6C323227B19E20058DFC9 /* RobotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotTableViewCell.swift; sourceTree = "<group>"; };
+		ABA6C326227B245A0058DFC9 /* RobotPerform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPerform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		AB9F3FBF226205930083C6EB /* MacPaw_Project */ = {
 			isa = PBXGroup;
 			children = (
+				ABA6C325227B24460058DFC9 /* Protocols */,
 				AB2806382269C09F00BD2A4B /* StoryBoards */,
 				AB9F3FFF226616DD0083C6EB /* Extensions */,
 				AB9F3FFC22660D170083C6EB /* Data */,
@@ -289,6 +294,7 @@
 				AB9F3FF62265C8590083C6EB /* RobotCollectionCell.swift */,
 				AB28063D2269CF3E00BD2A4B /* AboutMeTableViewCell.swift */,
 				ABA6C30B227883590058DFC9 /* SportsTableViewCell.swift */,
+				ABA6C323227B19E20058DFC9 /* RobotTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -321,6 +327,14 @@
 				AB1FF69B22725F0B007E7D06 /* BeefViewController.swift */,
 			);
 			path = BEEF;
+			sourceTree = "<group>";
+		};
+		ABA6C325227B24460058DFC9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ABA6C326227B245A0058DFC9 /* RobotPerform.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +435,7 @@
 				AB9F3FDD226210B80083C6EB /* Welder.swift in Sources */,
 				AB9F3FD6226205A80083C6EB /* Robot.swift in Sources */,
 				AB2806452269EBBC00BD2A4B /* ContainerViewController.swift in Sources */,
+				ABA6C324227B19E20058DFC9 /* RobotTableViewCell.swift in Sources */,
 				AB9F3FC9226205930083C6EB /* MacPaw_Project.xcdatamodeld in Sources */,
 				AB9F3FDF226219220083C6EB /* RobotType.swift in Sources */,
 				AB9F3FFB2266024D0083C6EB /* PersonalCab.swift in Sources */,
@@ -438,6 +453,7 @@
 				AB9F3FEC22621E370083C6EB /* PaintingRobot.swift in Sources */,
 				AB2806412269D82100BD2A4B /* Event.swift in Sources */,
 				AB2806362268725B00BD2A4B /* ThemeController.swift in Sources */,
+				ABA6C327227B245A0058DFC9 /* RobotPerform.swift in Sources */,
 				AB9F3FE222621A5C0083C6EB /* Robot1400.swift in Sources */,
 				ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */,
 				AB9F3FE822621DC30083C6EB /* Robot6400.swift in Sources */,

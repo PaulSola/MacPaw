@@ -201,23 +201,11 @@
                     <view key="view" contentMode="scaleToFill" id="QgM-aG-gQB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixn-Df-SA1">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ixn-Df-SA1" firstAttribute="trailing" secondItem="KHc-RN-Co7" secondAttribute="trailing" id="WYf-C5-aad"/>
-                            <constraint firstItem="Ixn-Df-SA1" firstAttribute="leading" secondItem="KHc-RN-Co7" secondAttribute="leading" id="ens-Uz-lFt"/>
-                            <constraint firstItem="Ixn-Df-SA1" firstAttribute="top" secondItem="KHc-RN-Co7" secondAttribute="top" id="jbx-kF-Ubf"/>
-                            <constraint firstAttribute="bottom" secondItem="Ixn-Df-SA1" secondAttribute="bottom" id="skY-dr-WXC"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KHc-RN-Co7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Robots" id="o0U-Jh-rFn"/>
                     <connections>
-                        <outlet property="robotScroll" destination="Ixn-Df-SA1" id="I7K-ki-D5O"/>
                         <segue destination="bYs-U2-DsA" kind="show" identifier="showRobot" id="iiY-8D-812"/>
                     </connections>
                 </viewController>
