@@ -49,6 +49,7 @@
 		ABA6C3162278CDBB0058DFC9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3152278CDBB0058DFC9 /* Device.swift */; };
 		ABA6C3182279B5BC0058DFC9 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C3172279B5BC0058DFC9 /* Constraint.swift */; };
 		ABA6C31B227A19FA0058DFC9 /* BeefLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */; };
+		ABA6C322227AEB520058DFC9 /* LikeMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C321227AEB520058DFC9 /* LikeMeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		ABA6C3152278CDBB0058DFC9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		ABA6C3172279B5BC0058DFC9 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeefLayout.swift; sourceTree = "<group>"; };
+		ABA6C321227AEB520058DFC9 /* LikeMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeMeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 				AB9F4000226617000083C6EB /* NotificationExt.swift */,
 				ABA6C3172279B5BC0058DFC9 /* Constraint.swift */,
 				ABA6C31A227A19FA0058DFC9 /* BeefLayout.swift */,
+				ABA6C321227AEB520058DFC9 /* LikeMeView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				AB9F3FFB2266024D0083C6EB /* PersonalCab.swift in Sources */,
 				ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */,
 				AB9F3FEA22621E1F0083C6EB /* PayloadingRobot.swift in Sources */,
+				ABA6C322227AEB520058DFC9 /* LikeMeView.swift in Sources */,
 				AB28064F226A081A00BD2A4B /* BeefAppSoreViewController.swift in Sources */,
 				ABA6C31B227A19FA0058DFC9 /* BeefLayout.swift in Sources */,
 				AB9F3FC3226205930083C6EB /* ViewController.swift in Sources */,

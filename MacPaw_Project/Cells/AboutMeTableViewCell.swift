@@ -10,6 +10,8 @@ import UIKit
 
 class AboutMeTableViewCell: UITableViewCell {
     
+    let likeView = LikeMeView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+    
      let baseView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -93,6 +95,7 @@ class AboutMeTableViewCell: UITableViewCell {
         baseView.addSubview(eventImageView)
         baseView.addSubview(titleView)
         titleView.addSubview(eventTitle)
+        titleView.addSubview(likeView)
         //baseView.addSubview(eventTitle)
         
         view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
@@ -108,7 +111,7 @@ class AboutMeTableViewCell: UITableViewCell {
         eventImageView.topAnchor.constraint(equalTo: baseView.topAnchor, constant: 0).isActive = true
         eventImageView.leftAnchor.constraint(equalTo: baseView.leftAnchor, constant: 0).isActive = true
         eventImageView.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: 0).isActive = true
-        eventImageView.heightAnchor.constraint(equalToConstant: CGFloat(Int(screenWidth - 50)/3*4) - 90).isActive = true
+        eventImageView.heightAnchor.constraint(equalToConstant: CGFloat(Int(screenWidth - 50)/3*4) - 100).isActive = true
 
         eventImageView.image = UIImage(named: image ?? "default")
         
@@ -122,6 +125,13 @@ class AboutMeTableViewCell: UITableViewCell {
         eventTitle.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: -5).isActive = true
         //eventTitle.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
         eventTitle.text = title
+        
+        likeView.translatesAutoresizingMaskIntoConstraints = false
+        //likeView.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 10).isActive = true
+        likeView.centerYAnchor.constraint(equalTo: titleView.centerYAnchor).isActive = true
+        likeView.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: -20).isActive = true
+        likeView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        likeView.widthAnchor.constraint(equalToConstant: 40).isActive = true
     }
 
 }
