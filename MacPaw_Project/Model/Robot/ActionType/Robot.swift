@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Robot {
+class Robot: Decodable {
     
     //let rovbotType: RobotType
     let robotActionType: RobotActionType
@@ -21,6 +21,31 @@ class Robot {
         self.name = name
         self.description = description
         self.robotImage = robotImage
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case description
+        case robotImage
+        
+    }
+    
+    required init(from decoder: Decoder) throws{
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let name = try container.decode(String.self, forKey: .name)
+        let description = try container.decode(String.self, forKey: .description)
+        let robotImage = try container.decode(String.self, forKey: .robotImage)
+
+        self.description = description
+        self.name = name
+        self.robotImage = robotImage
+        //self.robotActionType = Robot1400(robot: robot, height: 40, width: 300, length: 20, weight: 200)
+        self.robotActionType = .welding
+        
+        
+        
+        //try super.init(from: decoder)
     }
     
     func move() -> String{

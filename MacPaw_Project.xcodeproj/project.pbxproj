@@ -52,6 +52,8 @@
 		ABA6C322227AEB520058DFC9 /* LikeMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C321227AEB520058DFC9 /* LikeMeView.swift */; };
 		ABA6C324227B19E20058DFC9 /* RobotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C323227B19E20058DFC9 /* RobotTableViewCell.swift */; };
 		ABA6C327227B245A0058DFC9 /* RobotPerform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C326227B245A0058DFC9 /* RobotPerform.swift */; };
+		ABA6C32B227B5CDC0058DFC9 /* DecodeRobots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */; };
+		ABA6C32E227B70020058DFC9 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C32D227B70020058DFC9 /* ErrorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		ABA6C321227AEB520058DFC9 /* LikeMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeMeView.swift; sourceTree = "<group>"; };
 		ABA6C323227B19E20058DFC9 /* RobotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotTableViewCell.swift; sourceTree = "<group>"; };
 		ABA6C326227B245A0058DFC9 /* RobotPerform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPerform.swift; sourceTree = "<group>"; };
+		ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeRobots.swift; sourceTree = "<group>"; };
+		ABA6C32D227B70020058DFC9 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,7 @@
 		AB9F3FD7226207CC0083C6EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABA6C32C227B6FEF0058DFC9 /* Error */,
 				AB28063F2269D7D000BD2A4B /* AboutMe */,
 				AB9F3FDB2262109C0083C6EB /* Welder */,
 				AB9F3FDA2262108D0083C6EB /* Robot */,
@@ -272,6 +277,7 @@
 		AB9F3FED226379500083C6EB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				ABA6C329227B5C9A0058DFC9 /* JsonRobotHandler */,
 				AB9F3FEE226379690083C6EB /* RobotService.swift */,
 				AB2806422269D95C00BD2A4B /* EventService.swift */,
 			);
@@ -335,6 +341,22 @@
 				ABA6C326227B245A0058DFC9 /* RobotPerform.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		ABA6C329227B5C9A0058DFC9 /* JsonRobotHandler */ = {
+			isa = PBXGroup;
+			children = (
+				ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */,
+			);
+			path = JsonRobotHandler;
+			sourceTree = "<group>";
+		};
+		ABA6C32C227B6FEF0058DFC9 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				ABA6C32D227B70020058DFC9 /* ErrorType.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,8 +472,10 @@
 				AB9F3FF72265C8590083C6EB /* RobotCollectionCell.swift in Sources */,
 				AB9F3FEF226379690083C6EB /* RobotService.swift in Sources */,
 				AB28063C2269CE6100BD2A4B /* AboutMeViewController.swift in Sources */,
+				ABA6C32B227B5CDC0058DFC9 /* DecodeRobots.swift in Sources */,
 				AB9F3FEC22621E370083C6EB /* PaintingRobot.swift in Sources */,
 				AB2806412269D82100BD2A4B /* Event.swift in Sources */,
+				ABA6C32E227B70020058DFC9 /* ErrorType.swift in Sources */,
 				AB2806362268725B00BD2A4B /* ThemeController.swift in Sources */,
 				ABA6C327227B245A0058DFC9 /* RobotPerform.swift in Sources */,
 				AB9F3FE222621A5C0083C6EB /* Robot1400.swift in Sources */,

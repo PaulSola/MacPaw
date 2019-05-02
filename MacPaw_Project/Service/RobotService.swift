@@ -10,6 +10,40 @@ import Foundation
 
 class RobotService {
     
+    let jsonRobots = """
+{
+"robots": [
+{
+"type": "welding",
+"name":"Name1",
+"description":"Some1",
+"robotImage":"Img1",
+"welder":
+{
+  "weldingType":"tig",
+  "welderName": "Fronius",
+  "maxCurrent": 300,
+  "minCurrent": 20
+}
+},
+{
+"type": "painting",
+"name":"Name1",
+"description":"Some1",
+"robotImage":"Img1",
+"paintingUnit":"Kistochka"
+},
+{
+"type": "payLoad",
+"name":"Name1",
+"description":"Some1",
+"robotImage":"Img1",
+"payLoadLimit": 300
+}
+]
+}
+""".data(using: .utf8)!
+    
     func addRobots(completion: @escaping (_ robots: [RobotWithAction]?,_ error: String?)->()){
         
         var robots = [RobotType]() //?
@@ -35,6 +69,13 @@ class RobotService {
         robots.append(robotType3)
         robots.append(robotType4)
         
+        do{
+        let apiResponse = try JSONDecoder().decode(Robots.self, from: jsonRobots)// responceData
+        print(apiResponse)
+        }
+        catch{
+            print(error)
+        }
         if(robots != nil){
             
             completion(devideIntoGroups(robots),nil)

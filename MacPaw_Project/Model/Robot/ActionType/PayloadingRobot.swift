@@ -12,6 +12,17 @@ class PayloadingingRobot: Robot {
     
     let payLoadLimit : Int
     
+    private enum CodingKeys: String, CodingKey {
+        case payLoadLimit
+    }
+    
+    required  init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.payLoadLimit = try container.decode(Int.self, forKey: .payLoadLimit)
+        
+        try super.init(from: decoder)
+    }
+    
     init(robotActionType: RobotActionType, name: String, description: String, robotImage:String, payLoadLimit: Int) {
         
         self.payLoadLimit = payLoadLimit

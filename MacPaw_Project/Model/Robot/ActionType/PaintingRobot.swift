@@ -12,12 +12,21 @@ class PaintingRobot: Robot {
     
     let paintingUnit : String
     
+    private enum CodingKeys: String, CodingKey {
+        case paintingUnit
+    }
     init(robotActionType: RobotActionType, name: String, description: String, robotImage:String, paintingUnit: String) {
         
         self.paintingUnit = paintingUnit
         
         
         super.init(robotActionType: robotActionType, name: name, description: description, robotImage: robotImage)
+    }
+    
+    required  init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.paintingUnit = try container.decode(String.self, forKey: .paintingUnit)
+        try super.init(from: decoder)
     }
     
     override func performAction() -> String {

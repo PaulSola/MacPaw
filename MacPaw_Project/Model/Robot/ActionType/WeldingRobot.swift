@@ -12,6 +12,23 @@ class WeldingRobot: Robot {
     
     let welder : Welder
     
+    enum WelderKey: String, CodingKey {
+        case welder
+    }
+    enum WeldingKeys: String, CodingKey {
+        case district
+        case subDistrict
+        case country
+        case postalCode
+    }
+    
+    required  init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: WelderKey.self)
+        
+        self.welder = try container.decode(Welder.self, forKey: .welder)
+        try super.init(from: decoder)
+    }
+    
     init(robotActionType: RobotActionType, name: String, description: String, robotImage: String, welder: Welder) {
         
         self.welder = welder
