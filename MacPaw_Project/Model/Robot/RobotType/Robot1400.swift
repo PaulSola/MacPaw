@@ -8,33 +8,11 @@
 
 import Foundation
 
-class Robot1400: RobotType{
-   override func getInfo() -> String {
-        return "ABB IRB 1400 with H:\(height), W:\(width), L:\(length)"
-    }
-    
-//    class A{
-//
-//    print() {
-//        return printRopotName() + printRopotType() + prtintSize()
-//    }
-//    printRopotName()
-//        printRobotName()
-//        printRopotType(){ABB IRB}
-//        prtintSize()
-//    }
-//
-//
-//    class ConcreteA : A {
-//        override printRobotName()
-//        override printSize()
-//    }
-//
-//
-//    A : ConcreteA
-//
-//    A.print()
 
+class Robot1400: RobotType{
+   override func getName() -> String {
+        return "1400"
+    }
     
     override func move() -> String{
         

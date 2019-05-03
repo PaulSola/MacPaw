@@ -33,7 +33,7 @@ class RobotService {
 "type": "welding",
 "name":"Albert",
 "description":"Some1",
-"robotImage":"1400",
+"robotImage":"welding1400",
 "welder":
 {
   "weldingType":"tig",
@@ -54,7 +54,7 @@ class RobotService {
 "type": "painting",
 "name":"Name1",
 "description":"Some1",
-"robotImage":"Img1",
+"robotImage":"welding1400",
 "paintingUnit":"Kistochka"
 }
 },
@@ -69,7 +69,7 @@ class RobotService {
 "type": "payLoad",
 "name":"Name1",
 "description":"Some1",
-"robotImage":"Img1",
+"robotImage":"welding1400",
 "payLoadLimit":300
 }
 }

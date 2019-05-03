@@ -27,8 +27,13 @@ class RobotType: Decodable{
         return robot.move()
     }
     func getInfo() ->String{
-        return "Some info"
+        return "ABB IRB " + getName() + " with size: " + getSize()
     }
+    func getSize() -> String{
+        return "H:\(height), W:\(width), L:\(length)"
+    }
+    func getName() -> String{return "name"}
+    
     private enum CodingKeys: CodingKey {
         case robot
         case height

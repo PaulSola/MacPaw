@@ -17,8 +17,8 @@ class Robot2400: RobotType{
         
     }
     
-    override func getInfo() -> String {
-        return "ABB IRB 2400 with H:\(height), W:\(width), L:\(length)"
+    override func getName() -> String {
+        return "2400"
     }
     
     override init(robot: Robot, height: Int, width: Int, length: Int, weight: Int) {

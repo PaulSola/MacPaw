@@ -93,7 +93,7 @@ extension ContainerViewController: PersonalViewDelegate{
         if shouldExpand {
             currentState = .leftPanelExpanded
             animateCenterPanelXPosition(
-                targetPosition: mainView.view.frame.width - 250)
+                targetPosition: mainView.view.frame.width - Device.width/2)
             
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
@@ -158,7 +158,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
                 // has moved more or less than halfway
                
                 print(rview.center.x)
-                let hasMovedGreaterThanHalfway = rview.center.x <= 80
+                let hasMovedGreaterThanHalfway = rview.center.x <= Device.width/2
                 animateLeftPanel(shouldExpand: hasMovedGreaterThanHalfway)
                 
             }else{print("NONe")}
