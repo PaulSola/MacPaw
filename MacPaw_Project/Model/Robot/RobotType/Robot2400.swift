@@ -10,32 +10,23 @@ import Foundation
 
 class Robot2400: RobotType{
   
-    var robot: Robot
     
-    var height: Int
-    
-    var width: Int
-    
-    var length: Int
-    
-    var weight: Int
-    
-    func move() -> String{
+    override func move() -> String{
         
         return robot.move() + " with limits of 2400 model "
         
     }
     
-    func getInfo() -> String {
+    override func getInfo() -> String {
         return "ABB IRB 2400 with H:\(height), W:\(width), L:\(length)"
     }
     
-    init(robot: Robot, height: Int, width: Int, length: Int, weight: Int) {
-        self.robot = robot
-        self.height = height
-        self.width = width
-        self.length = length
-        self.weight = weight
+    override init(robot: Robot, height: Int, width: Int, length: Int, weight: Int) {
+        super.init(robot: robot, height: height, width: width, length: length, weight: weight)
+    }
+    
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
     }
 }
 

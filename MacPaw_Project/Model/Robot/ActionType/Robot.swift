@@ -10,14 +10,13 @@ import Foundation
 
 class Robot: Decodable {
     
-    //let rovbotType: RobotType
-    let robotActionType: RobotActionType
     let robotImage: String
     let name: String
     let description: String
     
-    init(robotActionType: RobotActionType, name: String, description: String, robotImage: String) {
-        self.robotActionType = robotActionType
+    static var hashable: HashableType<Robot> { return HashableType(self) }
+    
+    init( name: String, description: String, robotImage: String) {
         self.name = name
         self.description = description
         self.robotImage = robotImage
@@ -36,12 +35,11 @@ class Robot: Decodable {
         let name = try container.decode(String.self, forKey: .name)
         let description = try container.decode(String.self, forKey: .description)
         let robotImage = try container.decode(String.self, forKey: .robotImage)
-
+// ADD TYPE!!
         self.description = description
         self.name = name
         self.robotImage = robotImage
         //self.robotActionType = Robot1400(robot: robot, height: 40, width: 300, length: 20, weight: 200)
-        self.robotActionType = .welding
         
         
         

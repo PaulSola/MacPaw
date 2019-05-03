@@ -20,7 +20,7 @@ class RobotTableViewCell: UITableViewCell {
     
      let robotActionTypeTitle: UILabel = {
         let label = UILabel(frame: CGRect(x: 20, y: 10, width: Device.width - 20, height: 30))
-        label.translatesAutoresizingMaskIntoConstraints = false
+        //label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(name:"Helvetica-Bold", size: 25)
         label.textColor = .black
         return label

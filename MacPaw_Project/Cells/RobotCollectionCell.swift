@@ -54,7 +54,7 @@ class RobotCollectionCell: UICollectionViewCell {
     func configureDayMode(){
         
         textLabel.textColor = .white
-        contentView.backgroundColor = .orange
+        contentView.backgroundColor = #colorLiteral(red: 0.8582376151, green: 0.4737543604, blue: 0.04903241439, alpha: 1)
     }
     
     func  setupView(){

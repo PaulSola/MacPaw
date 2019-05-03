@@ -29,12 +29,12 @@ class WeldingRobot: Robot {
         try super.init(from: decoder)
     }
     
-    init(robotActionType: RobotActionType, name: String, description: String, robotImage: String, welder: Welder) {
+    init( name: String, description: String, robotImage: String, welder: Welder) {
         
         self.welder = welder
         
         
-        super.init(robotActionType: robotActionType, name: name, description: description, robotImage: robotImage)
+        super.init( name: name, description: description, robotImage: robotImage)
     }
     
     override func performAction() -> String {

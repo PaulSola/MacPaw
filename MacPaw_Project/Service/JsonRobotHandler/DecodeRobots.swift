@@ -10,7 +10,7 @@ import Foundation
 
 struct Robots: Decodable {
     
-    var robots: [Robot]
+    var robots: [RobotType]
     
     enum RobotsKey: CodingKey {
         case robots
@@ -19,15 +19,15 @@ struct Robots: Decodable {
         case type
     }
     enum RobotTypes: String, Decodable { // ??? should =
-        case welding = "welding"
-        case payLoad = "payLoad"
-        case painting = "painting"
+        case small = "1400"
+        case medium = "2400"
+        case large = "6400"
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: RobotsKey.self)
         var robotsArrayForType = try container.nestedUnkeyedContainer(forKey: RobotsKey.robots)
-        var robots = [Robot]()
+        var robots = [RobotType]()
         
         var robotsArray = robotsArrayForType
         while(!robotsArrayForType.isAtEnd)
@@ -35,15 +35,15 @@ struct Robots: Decodable {
             let robot = try robotsArrayForType.nestedContainer(keyedBy: RobotTypeKey.self)
             let type = try robot.decode(RobotTypes.self, forKey: RobotTypeKey.type)
             switch type {
-            case .welding:
+            case .small:
                 print("found welding robot")
-                robots.append(try robotsArray.decode(WeldingRobot.self))
-            case .painting:
+                robots.append(try robotsArray.decode(Robot1400.self))
+            case .medium:
                 print("found painting robot")
-                robots.append(try robotsArray.decode(PaintingRobot.self))
-            case .payLoad:
+                robots.append(try robotsArray.decode(Robot2400.self))
+            case .large:
                 print("found payLoad robot")
-                robots.append(try robotsArray.decode(PayloadingingRobot.self))
+                robots.append(try robotsArray.decode(Robot6400.self))
             }
         }
         self.robots = robots

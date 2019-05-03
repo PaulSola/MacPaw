@@ -23,12 +23,12 @@ class PayloadingingRobot: Robot {
         try super.init(from: decoder)
     }
     
-    init(robotActionType: RobotActionType, name: String, description: String, robotImage:String, payLoadLimit: Int) {
+    init( name: String, description: String, robotImage:String, payLoadLimit: Int) {
         
         self.payLoadLimit = payLoadLimit
         
         
-        super.init(robotActionType: robotActionType, name: name, description: description, robotImage: robotImage)
+        super.init( name: name, description: description, robotImage: robotImage)
     }
     
     override func performAction() -> String {

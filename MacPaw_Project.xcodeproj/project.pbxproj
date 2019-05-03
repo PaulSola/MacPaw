@@ -54,6 +54,7 @@
 		ABA6C327227B245A0058DFC9 /* RobotPerform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C326227B245A0058DFC9 /* RobotPerform.swift */; };
 		ABA6C32B227B5CDC0058DFC9 /* DecodeRobots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */; };
 		ABA6C32E227B70020058DFC9 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C32D227B70020058DFC9 /* ErrorType.swift */; };
+		ABA6C332227C32110058DFC9 /* RobotMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6C331227C32110058DFC9 /* RobotMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		ABA6C326227B245A0058DFC9 /* RobotPerform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPerform.swift; sourceTree = "<group>"; };
 		ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeRobots.swift; sourceTree = "<group>"; };
 		ABA6C32D227B70020058DFC9 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		ABA6C331227C32110058DFC9 /* RobotMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA6C32A227B5CDC0058DFC9 /* DecodeRobots.swift */,
+				ABA6C331227C32110058DFC9 /* RobotMap.swift */,
 			);
 			path = JsonRobotHandler;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				ABA6C324227B19E20058DFC9 /* RobotTableViewCell.swift in Sources */,
 				AB9F3FC9226205930083C6EB /* MacPaw_Project.xcdatamodeld in Sources */,
 				AB9F3FDF226219220083C6EB /* RobotType.swift in Sources */,
+				ABA6C332227C32110058DFC9 /* RobotMap.swift in Sources */,
 				AB9F3FFB2266024D0083C6EB /* PersonalCab.swift in Sources */,
 				ABA6C30C227883590058DFC9 /* SportsTableViewCell.swift in Sources */,
 				AB9F3FEA22621E1F0083C6EB /* PayloadingRobot.swift in Sources */,

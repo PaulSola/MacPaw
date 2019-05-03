@@ -15,12 +15,12 @@ class PaintingRobot: Robot {
     private enum CodingKeys: String, CodingKey {
         case paintingUnit
     }
-    init(robotActionType: RobotActionType, name: String, description: String, robotImage:String, paintingUnit: String) {
+    init( name: String, description: String, robotImage:String, paintingUnit: String) {
         
         self.paintingUnit = paintingUnit
         
         
-        super.init(robotActionType: robotActionType, name: name, description: description, robotImage: robotImage)
+        super.init( name: name, description: description, robotImage: robotImage)
     }
     
     required  init(from decoder: Decoder) throws {
