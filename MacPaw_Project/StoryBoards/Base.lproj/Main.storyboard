@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="992" y="-1036"/>
         </scene>
-        <!--Container View Controller-->
+        <!--Person-->
         <scene sceneID="9EP-oz-Lb8">
             <objects>
                 <viewController id="WxN-OR-1TT" customClass="ContainerViewController" customModule="MacPaw_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="73D-Ew-k1z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="AXz-wE-lin"/>
+                    <tabBarItem key="tabBarItem" title="Person" image="personBar" id="AXz-wE-lin"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4o-je-ItZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,11 +299,11 @@
             </objects>
             <point key="canvasLocation" x="114" y="-276"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Robots-->
         <scene sceneID="mSR-6a-BKX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iee-vP-g9N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="d8e-dr-K39"/>
+                    <tabBarItem key="tabBarItem" title="Robots" image="robotBar" id="d8e-dr-K39"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gjX-lo-tbP">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -322,6 +322,8 @@
     <resources>
         <image name="emailDay" width="100" height="100"/>
         <image name="google-icon" width="256" height="256"/>
+        <image name="personBar" width="25" height="25"/>
+        <image name="robotBar" width="25" height="25"/>
         <image name="telDay" width="100" height="100"/>
     </resources>
 </document>
