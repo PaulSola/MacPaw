@@ -30,7 +30,7 @@ class PaintingRobot: Robot {
     }
     
     override func performAction() -> String {
-        return "This paints with \(paintingUnit)"
+        return "This robot paints with \(paintingUnit)"
     }
     
     

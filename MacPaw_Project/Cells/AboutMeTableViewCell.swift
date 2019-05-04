@@ -12,6 +12,8 @@ class AboutMeTableViewCell: UITableViewCell {
     
     let likeView = LikeMeView(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
     
+    let data = MyData()
+    
      let baseView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +36,6 @@ class AboutMeTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 20
         view.clipsToBounds = false
         view.backgroundColor = .white
-        view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.5
         view.layer.shadowOffset = CGSize.init(width: -10, height: 10)
         view.layer.shadowRadius = 5
@@ -85,10 +86,24 @@ class AboutMeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureNightMode(){
+        
+        //titleView.backgroundColor = .white
+        contentView.backgroundColor = #colorLiteral(red: 0.004211155586, green: 0.01019812174, blue: 0.1954909581, alpha: 1)
+        view.layer.shadowColor = UIColor.clear.cgColor
+    }
+    
+    func configureDayMode(){
+        
+        //robotActionTypeTitle.textColor = .black
+        contentView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
+        view.layer.shadowColor = UIColor.black.cgColor
+    }
+    
     func createView(image: String?, title: String){
         let screenWidth = UIScreen.main.bounds.width
         
-        contentView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
+        
         self.contentView.addSubview(view)
         self.contentView.addSubview(baseView)
         
@@ -120,18 +135,18 @@ class AboutMeTableViewCell: UITableViewCell {
         titleView.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: 0).isActive = true
         titleView.bottomAnchor.constraint(equalTo: baseView.bottomAnchor, constant: 0).isActive = true
         
-        eventTitle.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 5).isActive = true
-        eventTitle.leftAnchor.constraint(equalTo: baseView.leftAnchor, constant: 5).isActive = true
-        eventTitle.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: -5).isActive = true
-        //eventTitle.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
-        eventTitle.text = title
-        
         likeView.translatesAutoresizingMaskIntoConstraints = false
-        //likeView.topAnchor.constraint(equalTo: eventImageView.bottomAnchor, constant: 10).isActive = true
         likeView.centerYAnchor.constraint(equalTo: titleView.centerYAnchor).isActive = true
         likeView.rightAnchor.constraint(equalTo: baseView.rightAnchor, constant: -20).isActive = true
         likeView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         likeView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        eventTitle.centerYAnchor.constraint(equalTo: titleView.centerYAnchor, constant: -5).isActive = true
+        eventTitle.leftAnchor.constraint(equalTo: baseView.leftAnchor, constant: 10).isActive = true
+        eventTitle.rightAnchor.constraint(equalTo: likeView.leftAnchor, constant: -10).isActive = true
+        //eventTitle.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
+        eventTitle.text = title
+        
     }
 
 }

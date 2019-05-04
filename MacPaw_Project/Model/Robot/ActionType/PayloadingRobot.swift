@@ -32,7 +32,7 @@ class PayloadingingRobot: Robot {
     }
     
     override func performAction() -> String {
-        return "This robot payloads boxes with max \(payLoadLimit) weight Limit"
+        return "This robot payloads with \(payLoadLimit) weight Limit"
     }
     
     

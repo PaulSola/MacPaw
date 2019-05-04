@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-v4-jAz">
-                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -40,16 +40,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92143100500106812" green="0.92145264148712158" blue="0.92144101858139038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="y3L-v4-jAz" firstAttribute="bottom" secondItem="GVk-9j-e2U" secondAttribute="bottom" id="Hpm-6x-pRD"/>
-                            <constraint firstItem="y3L-v4-jAz" firstAttribute="top" secondItem="GVk-9j-e2U" secondAttribute="top" id="Sgy-hX-LFh"/>
-                            <constraint firstItem="y3L-v4-jAz" firstAttribute="trailing" secondItem="GVk-9j-e2U" secondAttribute="trailing" id="mfW-DX-qPf"/>
-                            <constraint firstItem="y3L-v4-jAz" firstAttribute="leading" secondItem="GVk-9j-e2U" secondAttribute="leading" id="vAh-v7-IgY"/>
+                            <constraint firstAttribute="bottom" secondItem="y3L-v4-jAz" secondAttribute="bottom" id="TL5-gK-MNE"/>
+                            <constraint firstItem="y3L-v4-jAz" firstAttribute="leading" secondItem="GVk-9j-e2U" secondAttribute="leading" id="YV5-EK-Bea"/>
+                            <constraint firstItem="y3L-v4-jAz" firstAttribute="trailing" secondItem="GVk-9j-e2U" secondAttribute="trailing" id="rlo-um-fLt"/>
+                            <constraint firstItem="y3L-v4-jAz" firstAttribute="top" secondItem="QUe-nN-kRO" secondAttribute="top" id="xh4-ug-6rd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GVk-9j-e2U"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Me" id="fvi-OY-V3u">
-                        <barButtonItem key="rightBarButtonItem" title="Likes" id="WXu-pY-Icz"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="About Me" id="fvi-OY-V3u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutMeTableView" destination="y3L-v4-jAz" id="fKT-s7-XPI"/>
@@ -93,6 +91,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eH-bt-6XW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776.79999999999995" y="68.815592203898049"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="M2M-CM-yxi">
+            <objects>
+                <viewController id="zMf-VO-FXQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zc0-YT-Xoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QC8-8g-SAX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="IlX-3w-nfA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohb-V9-UVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="929"/>
         </scene>
     </scenes>
     <resources>

@@ -78,7 +78,7 @@ class DescrRobotViewController: UIViewController {
 //        alertController.addAction(cancelAction)
 //        self.present(alertController, animated: true, completion: nil)
         view.bringSubviewToFront(effect)
-        self.moveLabel.text = robot.move()
+        self.moveLabel.text = robot.robot.performAction()
         
         self.view.addSubview(moveRobotView)
         moveRobotView.center = self.view.center
@@ -133,7 +133,7 @@ class DescrRobotViewController: UIViewController {
         imageView.heightAnchor.constraint(equalToConstant: CGFloat(Int(deviceWidth - 20)/4*3)).isActive = true
 
         self.view.addSubview(titleLabel)
-        titleLabel.text = robot.getInfo() + " " + robot.robot.performAction()
+        titleLabel.text = robot.getInfo()
         titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true

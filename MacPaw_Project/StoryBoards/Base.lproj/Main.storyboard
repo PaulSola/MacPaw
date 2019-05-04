@@ -67,7 +67,7 @@
                                         <rect key="frame" x="8" y="242" width="284" height="96"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YRe-Hd-Pkp">
-                                                <rect key="frame" x="8" y="14" width="87.5" height="68"/>
+                                                <rect key="frame" x="8" y="14" width="257.5" height="68"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-w5-efJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="68"/>
@@ -89,16 +89,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="owu-Vh-L5C">
-                                                        <rect key="frame" x="38" y="0.0" width="49.5" height="68"/>
+                                                        <rect key="frame" x="38" y="0.0" width="219.5" height="68"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmY-kJ-AJe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="35.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="pashasolyanikov@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmY-kJ-AJe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="219.5" height="35.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31S-w7-fLj">
-                                                                <rect key="frame" x="0.0" y="47.5" width="49.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+(380)50 812 19 26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31S-w7-fLj">
+                                                                <rect key="frame" x="0.0" y="47.5" width="219.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -117,16 +117,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="e6Z-Mo-ZQ4">
-                                        <rect key="frame" x="59" y="208" width="182.5" height="31"/>
+                                        <rect key="frame" x="125.5" y="208" width="49" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6Q-OY-Kdf">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1C-i3-qzs">
-                                                <rect key="frame" x="133.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="nightModeSwitch:" destination="jUc-Lg-c7M" eventType="valueChanged" id="WJC-yg-37c"/>
                                                 </connections>
@@ -149,11 +143,14 @@
                                     <constraint firstAttribute="bottom" secondItem="tOk-n0-gZH" secondAttribute="bottom" constant="12" id="trh-Gx-yjC"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-UY-Bb9">
-                                <rect key="frame" x="326" y="44" width="72" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="0.31724959339999997" blue="0.3463729867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-UY-Bb9">
+                                <rect key="frame" x="344" y="54" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8X4-VK-cUv"/>
+                                    <constraint firstAttribute="width" constant="60" id="Pwn-YZ-9kn"/>
+                                </constraints>
+                                <state key="normal" image="TapMe">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="tapped:" destination="jUc-Lg-c7M" eventType="touchUpInside" id="Gus-3g-98E"/>
@@ -162,10 +159,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Z9k-UY-Bb9" firstAttribute="top" secondItem="0cq-Cu-rET" secondAttribute="top" id="0jG-Ud-Y2P"/>
                             <constraint firstItem="Zix-Ag-Zm1" firstAttribute="centerX" secondItem="ecg-EZ-BCX" secondAttribute="centerX" id="Bl5-9G-NCh"/>
+                            <constraint firstItem="0cq-Cu-rET" firstAttribute="trailing" secondItem="Z9k-UY-Bb9" secondAttribute="trailing" constant="10" id="HDt-z7-u1k"/>
                             <constraint firstItem="Zix-Ag-Zm1" firstAttribute="centerY" secondItem="ecg-EZ-BCX" secondAttribute="centerY" id="LGn-Tr-vpZ"/>
-                            <constraint firstItem="0cq-Cu-rET" firstAttribute="trailing" secondItem="Z9k-UY-Bb9" secondAttribute="trailing" constant="16" id="wNu-iV-LPr"/>
+                            <constraint firstItem="Z9k-UY-Bb9" firstAttribute="top" secondItem="0cq-Cu-rET" secondAttribute="top" constant="10" id="NS2-h2-lrG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0cq-Cu-rET"/>
                     </view>
@@ -177,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhR-dq-P4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="565"/>
+            <point key="canvasLocation" x="549.27536231884062" y="564.50892857142856"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="79V-QU-k47">
@@ -320,6 +317,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TapMe" width="80" height="80"/>
         <image name="emailDay" width="100" height="100"/>
         <image name="google-icon" width="256" height="256"/>
         <image name="personBar" width="25" height="25"/>

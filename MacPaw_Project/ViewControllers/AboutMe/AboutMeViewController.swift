@@ -13,8 +13,8 @@ class AboutMeViewController: UIViewController {
     //dictionary
     
     @IBOutlet weak var aboutMeTableView: UITableView!
-    let screenWidth = UIScreen.main.bounds.width
-    
+    let screenWidth = Device.width
+    let data = MyData()
     var events = [Event]()
     
     let eventService = EventService()
@@ -23,7 +23,12 @@ class AboutMeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        aboutMeTableView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
+        NotificationCenter.default.addObserver(self, selector: #selector(darkModeEnabled(_:)), name: .nightModeEnabled, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(darkModeDisabled(_:)), name: .nightModeDisabled, object: nil)
+        
+        data.getMode() ? enableDarkMode() : disableDarkMode()
+        
+        //aboutMeTableView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
         
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: aboutMeTableView)
@@ -31,6 +36,32 @@ class AboutMeViewController: UIViewController {
         
         eventService.appendEvent(&events)
         
+    }
+    
+    @objc func darkModeEnabled(_ notification: Notification) {
+        enableDarkMode()
+        aboutMeTableView.reloadData()
+    }
+    
+    @objc func darkModeDisabled(_ notification: Notification) {
+        aboutMeTableView.reloadData()
+        disableDarkMode()
+    }
+    
+    
+    open func enableDarkMode() {
+        self.aboutMeTableView.backgroundColor = #colorLiteral(red: 0.004211155586, green: 0.01019812174, blue: 0.1954909581, alpha: 1)
+        self.navigationController?.navigationBar.barStyle = .black
+        self.tabBarController?.view.tintColor = UIColor.white
+        self.tabBarController?.tabBar.barStyle = .black
+
+    }
+    
+    open func disableDarkMode() {
+        aboutMeTableView.backgroundColor = #colorLiteral(red: 0.9313134518, green: 0.9313134518, blue: 0.9313134518, alpha: 1)
+        self.navigationController?.navigationBar.barStyle = .default
+        self.tabBarController?.view.tintColor = UIColor.blue
+        self.tabBarController?.tabBar.barStyle = .default
     }
     
 
@@ -48,11 +79,9 @@ extension AboutMeViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.createView(image: event.eventImage, title: event.eventName)
 
-        //cell.text = events[indexPath.row].name
-        
-        //if let baseView = cell.baseView {
             registerForPreviewing(with: self, sourceView: cell.baseView)
-        //}
+        
+        data.getMode() ? cell.configureNightMode() : cell.configureDayMode()
         
         return cell
     }
@@ -63,7 +92,6 @@ extension AboutMeViewController : UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(destination, animated: true)
 
         }
-//        let destination = SportsEventViewController(event: events[indexPath.row]) // Your destination
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

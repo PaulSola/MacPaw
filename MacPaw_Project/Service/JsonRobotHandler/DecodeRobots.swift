@@ -36,13 +36,10 @@ struct Robots: Decodable {
             let type = try robot.decode(RobotTypes.self, forKey: RobotTypeKey.type)
             switch type {
             case .small:
-                print("found welding robot")
                 robots.append(try robotsArray.decode(Robot1400.self))
             case .medium:
-                print("found painting robot")
                 robots.append(try robotsArray.decode(Robot2400.self))
             case .large:
-                print("found payLoad robot")
                 robots.append(try robotsArray.decode(Robot6400.self))
             }
         }

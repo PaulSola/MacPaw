@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Personal/ContainerViewController.swift"
-            timestampString = "578587623.564641"
+            timestampString = "578648928.421604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/RobotViewController.swift"
-            timestampString = "578580145.2962281"
+            timestampString = "578648928.422573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/RobotViewController.swift"
-            timestampString = "578580145.29651"
+            timestampString = "578648928.4227329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/Cells/RobotTableViewCell.swift"
-            timestampString = "578580145.296997"
+            timestampString = "578608098.102628"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/RobotViewController.swift"
-            timestampString = "578580145.297246"
+            timestampString = "578648928.423448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "callSegueFromCell(myData:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/RobotViewController.swift"
-            timestampString = "578580145.297429"
+            timestampString = "578648928.423589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "callSegueFromCell(myData:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/RobotViewController.swift"
-            timestampString = "578580145.2975481"
+            timestampString = "578648928.423725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/Cells/RobotTableViewCell.swift"
-            timestampString = "578580145.2977819"
+            timestampString = "578608098.102859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/DescrRobotViewController.swift"
-            timestampString = "578580145.297935"
+            timestampString = "578648928.423925"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/DescrRobotViewController.swift"
-            timestampString = "578580145.298112"
+            timestampString = "578648928.424005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/DescrRobotViewController.swift"
-            timestampString = "578580145.298179"
+            timestampString = "578648928.424068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -218,12 +218,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacPaw_Project/ViewControllers/Robot/DescrRobotViewController.swift"
-            timestampString = "578580145.298245"
+            timestampString = "578648928.424126"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacPaw_Project/Cells/AboutMeTableViewCell.swift"
+            timestampString = "578648928.424214"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "createView(image:title:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

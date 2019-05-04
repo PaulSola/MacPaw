@@ -29,7 +29,7 @@ class RobotType: Decodable{
     func getInfo() ->String{
         return "ABB IRB " + getName() + " with size: " + getSize()
     }
-    func getSize() -> String{
+    private func getSize() -> String{
         return "H:\(height), W:\(width), L:\(length)"
     }
     func getName() -> String{return "name"}

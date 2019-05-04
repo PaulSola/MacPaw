@@ -44,6 +44,27 @@ class RobotService {
 }
 },
 {
+"type": "1400",
+"height": 4,
+"width": 4,
+"length": 4,
+"weight": 4,
+"robot":
+{
+"type": "welding",
+"name":"Albert",
+"description":"Some1",
+"robotImage":"welding1400",
+"welder":
+{
+  "weldingType":"tig",
+  "welderName": "Fronius",
+  "maxCurrent": 300,
+  "minCurrent": 20
+}
+}
+},
+{
 "type": "2400",
 "height": 4,
 "width": 4,

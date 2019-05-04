@@ -83,7 +83,9 @@ class BeefViewController: UIViewController {
         scrollView.addSubview(beefDescr)
         scrollView.zeroConstraint( with: self.view)
         scrollView.backgroundColor = #colorLiteral(red: 0.772505552, green: 0.1750737086, blue: 0.05873733509, alpha: 1)
-        self.scrollView.contentSize.height = 2000
+        //  ПЕРЕДЕЛАТЬ КОСТЫЛЬ СКРОЛ!!!!!
+        //print(scrollView.autoSizedHeight())
+        self.scrollView.contentSize.height = 1000
         
         scrollView.addSubview(appView)
         appView.addSubview(beefAppImage)
