@@ -53,5 +53,5 @@ class Welder: Decodable {
 enum WelderType: String{
     case mig_mag
     case tig
-    case electrode
+    case spot
 }

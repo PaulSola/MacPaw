@@ -13,7 +13,7 @@ class SportsTableViewCell: UITableViewCell {
     let sportImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleToFill
+        image.contentMode = UIView.ContentMode.scaleAspectFill
         image.clipsToBounds = true
         
         return image

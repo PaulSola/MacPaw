@@ -17,9 +17,12 @@ class BeefEvent: Event{
     
     var eventImage: String
     
-    init(eventName: String, eventImage: String) {
+    var beefDescr : String
+    
+    init(eventName: String, eventImage: String, beefDescr: String) {
         self.eventName = eventName
         self.eventImage = eventImage
+        self.beefDescr = beefDescr
     }
     
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class PaintingRobot: Robot {
     
-    let paintingUnit : String
+    private let paintingUnit : String
     
     private enum CodingKeys: String, CodingKey {
         case paintingUnit

@@ -98,8 +98,8 @@ extension RobotTableViewCell : UICollectionViewDataSource, UICollectionViewDeleg
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: robotsCV, for: indexPath) as! RobotCollectionCell
         
-        if let robot = robots?[indexPath.row].robot{
-            cell.configureCell(title: robot.name, image: robot.robotImage)
+        if let robot = robots?[indexPath.row].getRobot(){
+            cell.configureCell(title: robot.getName(), image: robot.getRobotImage())
             
         }
         //cell.configureCell(title: robot?.name ?? "robot",image: robot?.robotImage ?? "default")

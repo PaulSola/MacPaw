@@ -10,19 +10,24 @@ import Foundation
 
 class RobotType: Decodable{
     
-    enum RobotActionTypes: String, Decodable { // ??? should =
+    private enum RobotActionTypes: String, Decodable { // ??? should =
         case welding = "welding"
         case payLoad = "payLoad"
         case painting = "painting"
     }
 
     
-    //var robotType: TypeOfRobot {get set}
-    var robot: Robot
-    var height: Int
-    var width: Int
-    var length: Int 
-    var weight: Int
+    private let robot: Robot // protected??
+    private let height: Int
+    private let width: Int
+    private let length: Int
+    private let weight: Int
+    
+    func getRobot() -> Robot {return robot}
+    
+    func performAction() -> String{
+        return robot.performAction()
+    }
     func move() -> String{
         return robot.move()
     }
@@ -43,10 +48,10 @@ class RobotType: Decodable{
         
     }
     
-    enum RobotsKey: CodingKey {
+    private enum RobotsKey: CodingKey {
         case robots
     }
-    enum RobotTypeKey: CodingKey {
+    private enum RobotTypeKey: CodingKey {
         case type
     }
     

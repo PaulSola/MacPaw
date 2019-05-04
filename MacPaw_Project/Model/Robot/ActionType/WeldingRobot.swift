@@ -10,12 +10,12 @@ import Foundation
 
 class WeldingRobot: Robot {
     
-    let welder : Welder
+    private let welder : Welder
     
-    enum WelderKey: String, CodingKey {
+    private enum WelderKey: String, CodingKey {
         case welder
     }
-    enum WeldingKeys: String, CodingKey {
+    private enum WeldingKeys: String, CodingKey {
         case district
         case subDistrict
         case country
@@ -38,7 +38,7 @@ class WeldingRobot: Robot {
     }
     
     override func performAction() -> String {
-        return "This robot welds with \(welder.welderName) \(welder.weldingType) type"
+        return "This robot welds with \(welder.welderName) \(welder.weldingType) \(welder.maxCurrent)"
     }
     
     

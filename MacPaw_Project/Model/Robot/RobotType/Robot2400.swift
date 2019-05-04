@@ -13,7 +13,7 @@ class Robot2400: RobotType{
     
     override func move() -> String{
         
-        return robot.move() + " with limits of 2400 model "
+        return getRobot().move() + " with limits of 2400 model "
         
     }
     

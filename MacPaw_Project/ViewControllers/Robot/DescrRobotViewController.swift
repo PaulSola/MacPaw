@@ -59,7 +59,7 @@ class DescrRobotViewController: UIViewController {
         //effect.effect = nil
         moveRobotView.layer.cornerRadius = 8
         
-        self.navigationItem.title = robot.robot.name;
+        self.navigationItem.title = robot.getRobot().getName();
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(addTapped))
         
         
@@ -78,7 +78,7 @@ class DescrRobotViewController: UIViewController {
 //        alertController.addAction(cancelAction)
 //        self.present(alertController, animated: true, completion: nil)
         view.bringSubviewToFront(effect)
-        self.moveLabel.text = robot.robot.performAction()
+        self.moveLabel.text = robot.performAction()
         
         self.view.addSubview(moveRobotView)
         moveRobotView.center = self.view.center
@@ -126,7 +126,7 @@ class DescrRobotViewController: UIViewController {
         effect.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
         self.view.addSubview(imageView)
-        imageView.image = UIImage(named: robot.robot.robotImage)
+        imageView.image = UIImage(named: robot.getRobot().getRobotImage())
         imageView.topAnchor.constraint(equalTo: selfAdjust.topAnchor, constant: 30).isActive = true
         imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
@@ -139,7 +139,7 @@ class DescrRobotViewController: UIViewController {
         titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
         
         self.view.addSubview(descText)
-        descText.text = robot.robot.description
+        descText.text = robot.getRobot().getDescription()
         descText.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         descText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         descText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true

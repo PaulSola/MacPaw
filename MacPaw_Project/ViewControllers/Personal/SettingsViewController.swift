@@ -41,7 +41,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["pashasolyanikov@gmail.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            mail.setMessageBody("<p>Hi Pasha!</p>", isHTML: true)
             
             present(mail, animated: true)
         } else {

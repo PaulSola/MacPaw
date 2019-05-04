@@ -27,6 +27,6 @@ import Foundation
 //переделть на класс
 protocol Event{
     
-    var eventName: String {get set}
-    var eventImage: String{get set}
+    var eventName: String { get }
+    var eventImage: String{ get }
 }

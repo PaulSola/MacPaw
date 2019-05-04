@@ -48,7 +48,6 @@ class BeefViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "SomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSomeomeSomeSomeSomeSomeSomeSomeSomeSomeSomeSome"
         label.font = UIFont(name:"Helvetica", size: 21)
         label.numberOfLines = 0
         label.textColor = .white
@@ -59,7 +58,7 @@ class BeefViewController: UIViewController {
     
     @objc private func showBeefApp(){
         print("showBeefApp")
-        
+        // ???????????????// открывает только если ссылка активированна из вне
         navigationController?.pushViewController(BeefAppSoreSiteViewController(url: event.beefAppStoreURL!), animated: true)
     }
     @objc private func showBeefSite(){
@@ -85,7 +84,7 @@ class BeefViewController: UIViewController {
         scrollView.backgroundColor = #colorLiteral(red: 0.772505552, green: 0.1750737086, blue: 0.05873733509, alpha: 1)
         //  ПЕРЕДЕЛАТЬ КОСТЫЛЬ СКРОЛ!!!!!
         //print(scrollView.autoSizedHeight())
-        self.scrollView.contentSize.height = 1000
+        self.scrollView.contentSize.height = 1350
         
         scrollView.addSubview(appView)
         appView.addSubview(beefAppImage)
@@ -113,6 +112,9 @@ class BeefViewController: UIViewController {
     }
     
     fileprivate func setAppView() {
+        beefDescr.text = event.beefDescr
+        siteAppImage.image = UIImage(named: "BUK1")
+        
         appView.topAnchor.constraint(equalTo: beefDescr.bottomAnchor, constant: 15).isActive = true
         appView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         appView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
@@ -144,6 +146,7 @@ class BeefViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         self.navigationItem.title = "BEEF"
+        
         
         
         setScrollView()

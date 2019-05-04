@@ -10,7 +10,7 @@ import Foundation
 
 class PayloadingingRobot: Robot {
     
-    let payLoadLimit : Int
+    private let payLoadLimit : Int
     
     private enum CodingKeys: String, CodingKey {
         case payLoadLimit

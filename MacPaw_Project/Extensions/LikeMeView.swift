@@ -117,7 +117,7 @@ class LikeMeView: UIView {
                         UIView.animate(withDuration: 0.5,
                                        animations: {
                                         self.stars[i].starView.frame = CGRect(x: self.stars[i].animated_x, y: self.stars[i].animated_y, width: 0, height: 0)
-                                        //self.stars[i].starView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                                        self.stars[i].starView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                                         //self.stars[i].starView.alpha = 0
                                         
                         })
@@ -142,14 +142,15 @@ class LikeMeView: UIView {
             
             self.heartView.layer.removeAllAnimations()
             self.pulsingLayer.removeAllAnimations()
-            self.self.layer.removeAllAnimations()
-            self.self.layoutIfNeeded()
+            self.layer.removeAllAnimations()
+            self.layoutIfNeeded()
             
             //            self.cirleView.center.x = view.center.x
             //            self.cirleView.center.y = view.center.y
             for  i in 0...stars.count - 1{
-                self.stars[i].starView.center.x = CGFloat(self.stars[i].x)
-                self.stars[i].starView.center.y = CGFloat(self.stars[i].y)
+//                self.stars[i].starView.center.x = CGFloat(self.stars[i].x)
+//                self.stars[i].starView.center.y = CGFloat(self.stars[i].y)
+                self.stars[i].starView.frame = CGRect(x: self.stars[i].x, y: self.stars[i].y, width: 0, height: 0)
                 
                 
             }

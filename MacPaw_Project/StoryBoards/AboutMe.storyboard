@@ -92,23 +92,6 @@
             </objects>
             <point key="canvasLocation" x="776.79999999999995" y="68.815592203898049"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="M2M-CM-yxi">
-            <objects>
-                <viewController id="zMf-VO-FXQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zc0-YT-Xoy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="QC8-8g-SAX"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="IlX-3w-nfA"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohb-V9-UVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1180" y="929"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bookBar" width="25" height="25"/>

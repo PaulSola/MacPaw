@@ -41,7 +41,7 @@ class RobotCollectionCell: UICollectionViewCell {
     func configureCell(title: String, image: String){
         
         textLabel.text = title
-        imageView.image = UIImage(named: image)
+        imageView.image = UIImage(named: image) ?? UIImage(named: "default")
     }
     
     func configureNightMode(){
@@ -54,7 +54,7 @@ class RobotCollectionCell: UICollectionViewCell {
     func configureDayMode(){
         
         textLabel.textColor = .white
-        contentView.backgroundColor = #colorLiteral(red: 0.8582376151, green: 0.4737543604, blue: 0.04903241439, alpha: 1)
+        contentView.backgroundColor = #colorLiteral(red: 0.8582376151, green: 0.5320006906, blue: 0.02750619419, alpha: 1)
     }
     
     func  setupView(){
